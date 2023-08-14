@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="text-center">Apple Store</h2>
+        <!-- table 1 -->
+        <table border="3" style="width: 100%;">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Volume</th>
+                <th>Total</th>
+            </tr>
+            <!-- table 1 row 1 -->
+            <tr>
+                <th>1</th>
+                <th>iPhone 14 Pro</th>
+                <th>70000/-</th>
+                <th><input type="number" style="width: 98%; height: 80%;" placeholder="Enter the Volume .. "
+                        id="product1Vol" onkeyup="product1()"></th>
+                <th id="product1Total"><input type="text" id="p1total" readonly></th>
+            </tr>
+            <!-- table 1 row 2  -->
+            <tr>
+                <th>2</th>
+                <th>iPhone 11</th>
+                <th>50000/-</th>
+                <th><input type="number" style="width: 98%; height: 80%;" placeholder="Enter the Volume .. "
+                        id="product2Vol" onkeyup="product2()"></th>
+                <th id="product2Total"><input type="text" id="p2total" readonly></th>
+            </tr>
+            <!-- table 1 row 3  -->
+            <tr>
+                <th>3</th>
+                <th>Watch series 8</th>
+                <th>12000/-</th>
+                <th><input type="number" style="width: 98%; height: 80%;" placeholder="Enter the Volume .. "
+                        id="product3Vol" onkeyup="product3()"></th>
+                <th id="product3Total"><input type="text" id="p3total"></th>
+            </tr>
+            <!-- table 1 row 4  -->
+            <tr>
+                <th>4</th>
+                <th>macbook M1</th>
+                <th>64000/-</th>
+                <th><input type="number" style="width: 98%; height: 80%;" placeholder="Enter the Volume .. "
+                        id="product4Vol" onkeyup="product4()"></th>
+                <th id="product4Total"><input type="text" id="p4total"></th>
+            </tr>
+            <!-- table 1 row 5  -->
+            <tr>
+                <th>5</th>
+                <th>macbook M2</th>
+                <th>100000/-</th>
+                <th><input type="number" style="width: 98%; height: 80%;" placeholder="Enter the Volume .. "
+                        id="product5Vol" onkeyup="product5()"></th>
+                <th id="product5Total"><input type="text" id="p5total"></th>
+            </tr>
+        </table> <br>
+        <!-- button -->
+        <div class="text">
+            <button id="ActionBtn" onclick="btn1()" class="text-center1">Calculate</button>
+        </div>
+        <br> <br>
+        <!-- table 2 -->
+        <table border="3" style="width: 100%;" class="text-center">
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Volume</th>
+                <th>Total</th>
+            </tr>
+            <!-- table 2 row 1  -->
+            <tr>
+                <td>iPhone 14 Pro</td>
+                <td>70000/-</td>
+                <td id="vol1"></td>
+                <td id="total1" rowspan="5"></td>
+            </tr>
+            <!-- table 2 row 2  -->
+            <tr>
+                <td>iPhone 11</td>
+                <td>50000/-</td>
+                <td id="vol2"></td>
+            </tr>
+
+            <!-- table 2 row 3  -->
+            <tr>
+                <td>Watch series 8</td>
+                <td>12000/-</td>
+                <td id="vol3"></td>
+            </tr>
+            <!-- table 2 row 4  -->
+            <tr>
+                <td>macbook M1</td>
+                <td>64000/-</td>
+                <td id="vol4"></td>
+            </tr>
+            <!-- table 2 row 5  -->
+            <tr>
+                <td>macbook M2</td>
+                <td>100000/-</td>
+                <td id="vol5"></td>
+            </tr>
+        </table>
+        <br>
+        <!-- Discount Empty -->
+        <div class="text">
+            <span id="discount"></span> <br>
+        </div>
+        <br> <br>
+        <hr>
+        <!-- payment  -->
+        <div class="payment">
+            <h3 class="text-center">Payment Method</h3>
+           <div class="selectionOfPayment text-center"> <br>
+            <label for="online"><input type="radio" name="name1" id="online" onclick="online()"> Online Payment</label> <br>
+            <label for="online"><input type="radio" name="name1" id="offline" onclick="offline()"> Offline Payment</label>
+        </div>
+    </div>
+    <br>
+    <!-- payment Details -->
+    <table border="3" style="width: 100%;" class="text-center" onkeyup="pay()">
+        <tr>
+            <th>Details</th>
+        </tr>
+        <tr>
+            <td id="Bname"></td>
+        </tr>
+        <tr>
+            <td id="Bcode"></td>
+        </tr>
+        <tr>
+            <td id="Bnumber"></td>
+        </tr>
+    </table>
+    <br>
+    <hr>
+
+    <div class="proof">
+        <h3 class="text-center">Proof</h3>
+        <input type="file">
+    </div>
+
+    <button id="submitBtn" class="text-center" onclick="submitbtn()"><a href="./close.html">Purchase</a></button>
+    <h3 id="inlineText"></h3>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
+
